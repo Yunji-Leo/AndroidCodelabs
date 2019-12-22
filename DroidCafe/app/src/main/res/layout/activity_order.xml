@@ -75,10 +75,10 @@
 
     <EditText
         android:id="@+id/phone_text"
-        android:layout_width="wrap_content"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/enter_phone_hint"
         android:inputType="phone"
@@ -123,8 +123,8 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/delivery_label">
@@ -133,6 +133,7 @@
             android:id="@+id/sameday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:onClick="onRadioButtonClicked"
             android:text="@string/same_day_messenger_service" />
 
@@ -150,4 +151,16 @@
             android:onClick="onRadioButtonClicked"
             android:text="@string/pick_up" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_text"
+        app:layout_constraintTop_toBottomOf="@+id/address_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
