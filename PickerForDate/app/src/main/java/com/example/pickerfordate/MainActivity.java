@@ -29,4 +29,17 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, getString(R.string.date) + dateMessage, Toast.LENGTH_SHORT).show();
     }
+
+    public void showTimePicker(View view) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
+
+    public void processTimePickerResult(int hour, int minute){
+        String hour_string = Integer.toString(hour);
+        String minute_string = Integer.toString(minute);
+        String timeMessage = (hour_string + ":"+minute_string);
+
+        Toast.makeText(this, "Time:" + timeMessage, Toast.LENGTH_SHORT).show();
+    }
 }
